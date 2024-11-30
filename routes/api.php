@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DreamsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => '/dreams'], function () {
+    Route::get('', [DreamsController::class, 'index']);
+    Route::post('', [DreamsController::class, 'store']);
+    Route::get('/{id}', [DreamsController::class, 'show']);
+    Route::put('/{id}', [DreamsController::class, 'update']);
+    Route::delete('/{id}', [DreamsController::class, 'destroy']);
 });
