@@ -19,14 +19,17 @@ class DreamsController extends Controller {
 
         $dream = Dreams::create($validated);
 
-        return response()->json(['message' => 'Sonho criado com sucesso!', 'data' => $dream], 201);
+        return response()->json([
+            'message' => __("message.success"),
+            'data' => $dream
+        ], 201);
     }
 
     public function show($id) {
         $dream = Dreams::find($id);
 
         if (!$dream) {
-            return response()->json(['message' => 'Sonho não encontrado'], 404);
+            return response()->json(['message' => __("message.not_found")], 404);
         }
 
         return response()->json($dream);
@@ -36,25 +39,28 @@ class DreamsController extends Controller {
         $dream = Dreams::find($id);
 
         if (!$dream) {
-            return response()->json(['message' => 'Sonho não encontrado'], 404);
+            return response()->json(['message' => __("message.not_found")], 404);
         }
 
         $validated = $request->validated();
         $dream->update($validated);
 
-        return response()->json(['message' => 'Sonho atualizado com sucesso!', 'data' => $dream]);
+        return response()->json([
+            'message' => __("message.success"),
+            'data' => $dream
+        ], 201);
     }
 
     public function destroy($id) {
         $dream = Dreams::find($id);
 
         if (!$dream) {
-            return response()->json(['message' => 'Sonho não encontrado'], 404);
+            return response()->json(['message' => __("message.not_found")], 404);
         }
 
         $dream->delete();
 
-        return response()->json(['message' => 'Sonho excluído com sucesso!']);
+        return response()->json(['message' => __("message.success"), 200]);
     }
 
 }

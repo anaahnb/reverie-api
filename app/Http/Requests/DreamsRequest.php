@@ -31,15 +31,15 @@ class DreamsRequest extends FormRequest
     public function messages()
     {
         return [
-            'dream_title.required' => ["O campo 'Titulo' é obrigatório"],
-            'dream_title.string' => ["O campo 'Titulo' é invalido"],
-            'dream_title.max' => ["O campo 'Titulo' ultrapasou a quantidade máxima de caracteres"],
+            'dream_title.required' => __("validation.required"),
+            'dream_title.string' => __("validation.string"),
+            'dream_title.max' => __("validation.max.string", ['max' => 50]),
 
-            'dream_description.required' => ["O campo 'Descrição' é obrigatório"],
-            'dream_description.string' => ["O campo 'Descrição' é invalido"],
+            'dream_description.required' => __("validation.required"),
+            'dream_description.string' => __("validation.string"),
 
-            'mood_id.required' => ["O campo 'Sentimento' é obrigatório"],
-            'mood_id.numeric' => ["O campo 'Sentimento' é inválido"],
+            'mood_id.required' => __("validation.required"),
+            'mood_id.numeric' => __("validation.numeric"),
         ];
     }
 }
