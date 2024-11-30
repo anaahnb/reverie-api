@@ -31,15 +31,15 @@ class DreamsRequest extends FormRequest
     public function messages()
     {
         return [
-            'dream_title.required' => __("validation.required"),
-            'dream_title.string' => __("validation.string"),
-            'dream_title.max' => __("validation.max.string", ['max' => 50]),
+            'dream_title.required' => __("validation.required"), 'attribute' => __("message.attributes.dream_title"),
+            'dream_title.string' => __("validation.string"), 'attribute' => __("message.attributes.dream_title"),
+            'dream_title.max' => __("validation.max.string", ['max' => 50, 'attribute' => __("message.attributes.dream_title")]),
 
-            'dream_description.required' => __("validation.required"),
-            'dream_description.string' => __("validation.string"),
+            'dream_description.required' => __("validation.required"), 'attribute' => __("message.attributes.dream_description"),
+            'dream_description.string' => __("validation.string"), 'attribute' => __("message.attributes.dream_description"),
 
-            'mood_id.required' => __("validation.required"),
-            'mood_id.numeric' => __("validation.numeric"),
+            'mood_id.required' => __("validation.required"), 'attribute' => __("message.attributes.mood_id"),
+            'mood_id.numeric' => __("validation.numeric"), 'attribute' => __("message.attributes.mood_id"),
         ];
     }
 }

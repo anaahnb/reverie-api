@@ -12,4 +12,15 @@ return [
     'deleted' => ':attribute successfully deleted.',
     'created' => ':attribute successfully created.',
     'updated' => ':attribute successfully updated.',
+    'attributes' => [
+        'dream_title' => "'Dream title'",
+        'dream_description' => "'Dream description'",
+        'mood_id' => "'Mood'",
+        'user_id' => "'User'",
+        'email' => "'Email'",
+        'password' => "'Password'",
+        'name' => "'Name'",
+        'created_at' => "'Created at'",
+        'updated_at' => "'Updated at'",
+    ],
 ];

@@ -1,11 +1,14 @@
 <?php
 
 return [
-    'required' => 'The :attribute field is required.',
-    'string' => 'The :attribute must be a string.',
-    'numeric' => 'The :attribute must be a number.',
+    'required' => ':attribute field is required.',
+    'string' => ':attribute must be a string.',
+    'numeric' => ':attribute must be a number.',
     'max' => [
-        'string' => 'The :attribute may not be greater than :max characters.',
+        'string' => ':attribute may not be greater than :max characters.',
     ],
-    'unique' => 'The :attribute has already been taken.',
+    'min' => [
+        'string' => ':attribute may not be greater than :min characters.',
+    ],
+    'unique' => ':attribute has already been taken.',
 ];

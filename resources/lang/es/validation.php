@@ -1,12 +1,15 @@
 <?php
 
 return [
-    'required' => 'El campo :attribute es obligatorio.',
-    'string' => 'El :attribute debe ser una cadena.',
-    'numeric' => 'El :attribute debe ser un número.',
+    'required' => ':attribute es obligatorio.',
+    'string' => ':attribute debe ser una cadena.',
+    'numeric' => ':attribute debe ser un número.',
     'max' => [
-        'string' => 'El :attribute no puede ser mayor que :max caracteres.',
+        'string' => ':attribute no puede ser mayor que :max caracteres.',
     ],
-    'unique' => 'El :attribute ya ha sido tomado.',
+    'min' => [
+        'string' => ':attribute no puede tener menos caracteres que :min.',
+    ],
+    'unique' => ':attribute ya ha sido tomado.',
 
 ];

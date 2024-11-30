@@ -12,4 +12,15 @@ return [
     'deleted' => ':attribute eliminado con éxito.',
     'created' => ':attribute creado con éxito.',
     'updated' => ':attribute actualizado con éxito.',
+    'attributes' => [
+        'dream_title' => "'Título del sueño'",
+        'dream_description' => "'Descripción del sueño'",
+        'mood_id' => "'Sentimiento'",
+        'user_id' => "'Usuario'",
+        'email' => "'Correo electrónico'",
+        'password' => "'Contraseña'",
+        'name' => "'Nombre'",
+        'created_at' => "'Fecha de creación'",
+        'updated_at' => "'Fecha de actualización'",
+    ],
 ];
